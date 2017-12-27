@@ -1,0 +1,3 @@
+class PodcastManager {
+  private podcasts = [];
+}
