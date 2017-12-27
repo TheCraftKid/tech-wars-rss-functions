@@ -1,18 +1,10 @@
 import * as admin from 'firebase-admin';
 import * as functions from 'firebase-functions';
+import { BUCKET_NAME, RSS_TEMPLATE_NAME, DOWNLOAD_LOCATION } from './config';
 
 admin.initializeApp({
   credential: admin.credential.cert(functions.config().firebase),
 });
-
-const BUCKET_NAME = 'tech-wars';
-
-/**
- * The file name of the RSS template on Google Cloud Storage.
- */
-const RSS_TEMPLATE_NAME = 'template.rss'
-
-const DOWNLOAD_LOCATION = '/tmp/default.rss';
 
 /**
  * Fetches the file named {@link RSS_TEMPLATE_NAME} in the {@link BUCKET_NAME]}
