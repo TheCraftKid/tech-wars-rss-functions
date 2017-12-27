@@ -10,7 +10,7 @@ admin.initializeApp({
  * Fetches the file named {@link RSS_TEMPLATE_NAME} in the {@link BUCKET_NAME]}
  * bucket.
  */
-async function fetchRSS(): Promise<string> {
+export async function fetchRSS(): Promise<string> {
   try {
     const download = await admin.storage().bucket(BUCKET_NAME)
       .file(RSS_TEMPLATE_NAME)
