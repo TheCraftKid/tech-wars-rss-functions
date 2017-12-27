@@ -1,7 +1,7 @@
 /**
  * Generates an RSS snippet for a podcast for Google Play Music.
  */
-function generatePodcast(podcast: Podcast) {
+export function generatePodcast(podcast: Podcast) {
   return `<title>${podcast.title}</title>
           <googleplay:author>${podcast.author}</googleplay:author>
           <googleplay:email>${podcast.email}</googleplay:email>
@@ -14,7 +14,7 @@ function generatePodcast(podcast: Podcast) {
 /**
  * Generates an RSS snippet for an episode of a podcast with the given information.
  */
-function generateEpisode(episode: PodcastEpisode) {
+export function generateEpisode(episode: PodcastEpisode) {
   return `<item>${episode.item}</item>
           <title>${episode.title}</title>
           <enclosure url="${episode.enclosure.url}" length="${episode.enclosure.length}
@@ -139,4 +139,11 @@ interface PodcastEpisode {
   explicit?: boolean,
   order?: number,
   block?: boolean,
+}
+
+export {
+  Enclosure,
+  Category,
+  Podcast,
+  PodcastEpisode,
 }
