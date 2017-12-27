@@ -1,0 +1,14 @@
+{
+  "name": "tech-wars-rss-functions",
+  "version": "1.0.0",
+  "description": "Some functions to render RSS for the Tech Wars podcast",
+  "main": "index.js",
+  "repository": "https://github.com/TheCraftKid/tech-wars.git",
+  "author": "Willie Chalmers III",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "firebase serve functions",
+    "deploy": "firebase deploy functions"
+  }
+}

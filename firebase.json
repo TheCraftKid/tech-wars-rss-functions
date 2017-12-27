@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "predeploy": "npm --prefix functions run build"
+  },
+  "hosting": {
+    "rewrites": [
+      {
+        "source": "/tech-wars.rss",
+        "function": "getRSSFeed"
+      },
+      {
+        "source": "/updatePodcast",
+        "function": "updateRSSFeed"
+      }
+    ],
+    "postdeploy": "./update_podcast.sh"
+  }
+}
