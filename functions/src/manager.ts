@@ -16,14 +16,14 @@ export class PodcastManager {
    * 
    * @param episode {PodcastEpisode} The episode to 
    */
-  public updatePodcast(episode: PodcastEpisode) {
-    const rss = fetchRSS()
+  public async updatePodcast(episode: PodcastEpisode) {
+    const rss = await this.fetchPodcasts();
   }
 
   /**
    * Fetches the podcasts from 
    */
-  public async fetchPodasts(): Promise<string> {
+  public async fetchPodcasts(): Promise<string> {
     return await fetchRSS();
   }
 }
